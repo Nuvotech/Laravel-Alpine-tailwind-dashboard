@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .shrinked-dropdown {
+        @apply sm:absolute top-0 left-20 sm:shadow-md sm:z-10 sm:bg-theme-gray sm:rounded-md sm:p-4 border-l sm:border-none border-gray-400 ml-4 pl-4 sm:ml-0 w-28;
+    }
+
+    .active-navigation {
+        @apply bg-gray-800 text-gray-100;
+    }
+    .active-category {
+        @apply bg-teal-500 text-gray-100;
+    }
+
+    .input {
+        @apply p-2 rounded-md;
+    }
+
+    .error {
+        @apply text-red-500 text-xs;
+    }
+    .alert {
+        @apply w-full p-2 text-sm text-center rounded-md text-gray-700;
+    }
+    .alert-success {
+        @apply bg-green-300;
+    }
+    .button {
+        @apply text-sm px-3 py-2 rounded-md hover:cursor-pointer hover:bg-green-700 hover:text-gray-100;
+    }
+
+    .activeTab {
+        @apply border-b;
+    }
+    .primary-btn {
+        @apply px-4 py-2 bg-blue-500 rounded-md text-white text-sm;
+    }
+    .secondary-btn {
+        @apply px-4 py-2 bg-gray-600 rounded-md text-white text-sm;
+    }
+    .success-btn {
+        @apply px-4 py-2 bg-green-600 rounded-md text-white text-sm;
+    }
+    .info-btn {
+        @apply px-4 py-2 bg-blue-600 rounded-md text-white text-sm;
+    }
+    .warning-btn {
+        @apply px-4 py-2 bg-orange-300 rounded-md text-white text-sm;
+    }
+    .danger-btn {
+        @apply px-4 py-2 bg-red-500 rounded-md text-white text-sm;
+    }
+    .dark-btn {
+        @apply px-4 py-2 bg-gray-900 rounded-md text-white text-sm;
+    }
+    .light-btn {
+        @apply px-4 py-2 bg-gray-200 rounded-md text-white text-sm;
+    }
+    .link-btn {
+        @apply px-4 py-2 rounded-md text-blue-400 text-sm;
+    }
+
+    /* Outline btn style  */
+    .primary-btn-outline {
+        @apply px-4 py-2  rounded-md text-blue-500 border border-blue-500 text-sm;
+    }
+    .secondary-btn-outline {
+        @apply px-4 py-2 text-gray-600 rounded-md border border-gray-600 text-sm;
+    }
+    .success-btn-outline {
+        @apply px-4 py-2 text-green-500 rounded-md border border-green-800  text-sm hover:bg-green-500 hover:text-white hover:border-none;
+    }
+    .info-btn-outline {
+        @apply px-4 py-2 text-blue-600 rounded-md border border-blue-600 text-sm hover:bg-blue-600 hover:text-white hover:border-none;
+    }
+    .warning-btn-outline {
+        @apply px-4 py-2 text-orange-300 rounded-md border border-orange-300 text-sm hover:bg-green-500 hover:text-white hover:border-none;
+    }
+    .danger-btn-outline {
+        @apply px-4 py-2 text-red-500 rounded-md border border-red-500 text-sm hover:bg-red-500 hover:text-white hover:border-none;
+    }
+    .dark-btn-outline {
+        @apply px-4 py-2 bg-gray-900 rounded-md text-white text-sm hover:bg-gray-900 hover:text-white hover:border-none;
+    }
+    .light-btn-outline {
+        @apply px-4 py-2 bg-gray-200 rounded-md text-white text-sm hover:bg-gray-200 hover:text-white hover:border-none;
+    }
+    .link-btn-outline {
+        @apply px-4 py-2 rounded-md text-blue-400 text-sm hover:bg-green-500 hover:text-white hover:border-none;
+    }
+
+    .view-btn {
+        @apply px-6 py-2 bg-green-100 rounded-md text-green-600 text-sm transition duration-300 ease-out hover:ease-in hover:bg-green-600 hover:text-white;
+    }
+    .apply-btn {
+        @apply px-6 py-2 bg-blue-100 rounded-md text-blue-600 text-sm transition duration-300 ease-out hover:ease-in hover:bg-blue-600 hover:text-white;
+    }
+
+    .contact-btn {
+        @apply px-6 py-2 bg-green-300 rounded-md text-green-900 text-sm transition duration-300 ease-out hover:ease-in hover:bg-green-900 hover:text-white;
+    }
+
+    /* Job type tags  */
+    .full-time-tag {
+        @apply bg-green-200 text-green-600 py-1 px-3 rounded-md text-xxs;
+    }
+    .salary-time-tag {
+        @apply bg-teal-100 text-black py-1 px-3 rounded-md font-medium text-xs;
+    }
+    .requirement-tag {
+        @apply bg-gray-300 text-black py-1 px-3 rounded-md font-medium text-xxs;
+    }
+    .part-time-tag {
+        @apply bg-red-200 text-red-600 py-1 px-3 rounded-md text-xxs;
+    }
+    .freelance-tag {
+        @apply bg-blue-200 text-blue-600 py-1 px-3 rounded-md text-xxs;
+    }
+
+    /* job details tags  */
+    .in-job-tags {
+        @apply bg-orange-100 text-orange-700 px-2 rounded-md;
+    }
+}
+@layer base {
+    html {
+        font-family: Poppins, Manrope, sans-serif;
+    }
+}
