@@ -35,10 +35,10 @@
           </svg>
         </button>
 
-        <ul class="pt-6">
+        <ul class="pt-6 text-base">
           <!-- Home  -->
           <li
-            class="relative flex items-center space-x-2 rounded-md p-2 cursor-pointer mb-5 text-sm active-navigation"
+            class="relative flex items-center space-x-2 rounded-md p-2 cursor-pointer mb-5  active-navigation"
             :class="{'justiy-start' : $store.sidebar.full, 'sm:justify-center': !$store.sidebar.full}"
           >
             <i data-feather="home" class="h-4 w-4"></i>
@@ -47,7 +47,7 @@
             </h1>
           </li>
           <!-- Pages  -->
-          <li x-data="dropdown" class="relative mb-4 text-sm">
+          <li x-data="dropdown" class="relative mb-4 ">
             <div
               @click="toggle('students')"
               class="flex justify-between text-gray-400 hover:text-gray-200 hover:bg-gray-800 items-center space-x-2 rounded-md p-2 cursor-pointer"
@@ -62,7 +62,7 @@
             <ul
               x-show="open"
               @click.outside="open =false"
-              :class="$store.sidebar.full ? 'border-l border-gray-400 ml-6 pl-4 text-sm' : 'shrinked-dropdown'"
+              :class="$store.sidebar.full ? 'border-l border-gray-400 ml-6 pl-4 ' : 'shrinked-dropdown'"
               class="text-gray-400 space-y-3"
             >
               <li
@@ -90,7 +90,7 @@
           </li>
 
           <!-- UI Elements  -->
-          <li x-data="dropdown" class="relative mb-4 text-sm">
+          <li x-data="dropdown" class="relative mb-4 ">
             <div
               @click="toggle('ui-element')"
               class="flex justify-between text-gray-400 hover:text-gray-200 hover:bg-gray-800 items-center space-x-2 rounded-md p-2 cursor-pointer"
@@ -108,7 +108,7 @@
             <ul
               x-show="open"
               @click.outside="open =false"
-              :class="$store.sidebar.full ? 'border-l border-gray-400 ml-6 pl-4 text-sm' : 'sm:absolute top-0 left-20 sm:shadow-md sm:z-10 sm:bg-gray-900 sm:rounded-md sm:p-4 bordered-l sm:border-none border-gray-400 ml-4 pl-4 sm:ml-0 w-28'"
+              :class="$store.sidebar.full ? 'border-l border-gray-400 ml-6 pl-4 ' : 'sm:absolute top-0 left-20 sm:shadow-md sm:z-10 sm:bg-gray-900 sm:rounded-md sm:p-4 bordered-l sm:border-none border-gray-400 ml-4 pl-4 sm:ml-0 w-28'"
               class="text-gray-400 space-y-3"
             >
               <li
@@ -125,7 +125,7 @@
             </ul>
           </li>
           <!-- Tables  -->
-          <li class="relative mb-4 text-sm">
+          <li class="relative mb-4 ">
             <div
               class="flex justify-between text-gray-400 hover:text-gray-200 hover:bg-gray-800 items-center space-x-2 rounded-md p-2 cursor-pointer"
             >
@@ -138,7 +138,7 @@
             </div>
           </li>
           <!-- My Forms  -->
-          <li class="relative mb-4 text-sm">
+          <li class="relative mb-4 ">
             <div
               class="relative flex items-center text-gray-400 hover:text-gray-200 hover:bg-gray-800 space-x-2 rounded-md p-2 cursor-pointer"
             >
@@ -148,7 +148,7 @@
               >
                 <i data-feather="edit" class="h-4 w-4"></i>
                 <h1
-                  class="text-sm"
+                  class=""
                   :class="$store.sidebar.full ? '' : 'hidden'"
                 >
                   Forms
@@ -158,7 +158,7 @@
           </li>
 
           <!-- Jobs  -->
-          <li x-data="dropdown" class="relative mb-4 text-sm">
+          <li x-data="dropdown" class="relative mb-4 ">
             <div
               @click="toggle('registration')"
               class="flex justify-between text-gray-400 hover:text-gray-200 hover:bg-gray-800 items-center space-x-2 rounded-md p-2 cursor-pointer"
@@ -174,7 +174,7 @@
             <div
               x-show="open"
               @click.outside="open =false"
-              :class="$store.sidebar.full ? 'border-l border-gray-400 ml-4 pl-4 text-sm' : 'sm:absolute top-0 left-20 sm:shadow-md sm:z-10 sm:bg-gray-900 sm:rounded-md sm:p-4 bordered-l sm:border-none border-gray-400 ml-4 pl-4 sm:ml-0 w-28'"
+              :class="$store.sidebar.full ? 'border-l border-gray-400 ml-4 pl-4 ' : 'sm:absolute top-0 left-20 sm:shadow-md sm:z-10 sm:bg-gray-900 sm:rounded-md sm:p-4 bordered-l sm:border-none border-gray-400 ml-4 pl-4 sm:ml-0 w-28'"
               class="text-gray-400 space-y-3"
             >
               <h1 class="hover:text-gray-200 cursor-pointer">
@@ -195,7 +195,7 @@
             </div>
           </li>
           <!-- Calendar  -->
-          <li x-data="dropdown" class="relative mb-4 text-sm">
+          <li x-data="dropdown" class="relative mb-4 ">
             <div
               @click="toggle('registration')"
               class="flex justify-between text-gray-400 hover:text-gray-200 hover:bg-gray-800 items-center space-x-2 rounded-md p-2 cursor-pointer"
@@ -222,7 +222,7 @@
           </li>
 
           <!-- Tables  -->
-          <li x-data="dropdown" class="relative mb-4 text-sm">
+          <li x-data="dropdown" class="relative mb-4 ">
             <div
               @click="toggle('students')"
               class="flex justify-between text-gray-400 hover:text-gray-200 hover:bg-gray-800 items-center space-x-2 rounded-md p-2 cursor-pointer"
@@ -254,7 +254,7 @@
           >
             <i data-feather="star" class="h-4 w-4"></i>
             <h1
-              class="text-sm"
+              class=""
               :class="$store.sidebar.full ? '' : 'hidden'"
             >
               Icons

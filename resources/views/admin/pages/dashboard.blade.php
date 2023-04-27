@@ -1,6 +1,6 @@
 <x-app-layout>
         <!-- content area main content  -->
-        <div class="w-screen bg-body-gray antialiased flex relative">
+        <div class="w-full bg-body-gray antialiased flex relative">
             <!-- side Navigation  -->
             @include('layouts.admin.components.sidenavigation')
             <!-- Top navigation area  -->

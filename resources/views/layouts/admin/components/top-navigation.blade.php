@@ -1,4 +1,4 @@
-<div class="w-full flex items-center text-gray-500 bg-white h-16 fixed" x-data :class="$store.sidebar.full ? 'sm:ml-64' : 'ml-20' ">
+<div class="w-full mx-auto flex items-center text-gray-500 bg-white h-16 fixed">
     {{-- <div
       class="hidden sm:flex shrink-0 text-center h-full items-center bg-theme-gray"
       x-data :class="$store.sidebar.full ? 'sm:w-64 ' : 'w-20' "
@@ -40,7 +40,7 @@
         <i data-feather="x" class="cursor-pointer hover:text-red-500"></i>
       </div>
 
-      <div x-data="dropdown" class="relative hidden sm:block">
+      <div x-data="dropdown" class="relative hidden sm:block" x-data :class="$store.sidebar.full ? 'sm:ml-64' : 'ml-20' ">
         <div @click="toggle()" class="flex items-center">
           <span class="text-sm">+ Create New </span>
           <span>
