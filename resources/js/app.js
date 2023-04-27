@@ -19,7 +19,7 @@ Alpine.store("sidebar", {
 // dropdown
 Alpine.data("dropdown", () => ({
     open: false,
-    toggle() {
+    toggle(some) {
         this.open = !this.open;
     },
     activetab: "bg-gray-800 text-gray-200",

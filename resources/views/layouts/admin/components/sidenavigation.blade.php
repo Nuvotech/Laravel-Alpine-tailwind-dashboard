@@ -49,7 +49,7 @@
           <!-- Pages  -->
           <li x-data="dropdown" class="relative mb-4 ">
             <div
-              @click="toggle('students')"
+              @click="toggle('pages')"
               class="flex justify-between text-gray-400 hover:text-gray-200 hover:bg-gray-800 items-center space-x-2 rounded-md p-2 cursor-pointer"
             >
               <div class="relative flex space-x-2 items-center">
@@ -160,7 +160,7 @@
           <!-- Jobs  -->
           <li x-data="dropdown" class="relative mb-4 ">
             <div
-              @click="toggle('registration')"
+              @click="toggle('jobs')"
               class="flex justify-between text-gray-400 hover:text-gray-200 hover:bg-gray-800 items-center space-x-2 rounded-md p-2 cursor-pointer"
             >
               <div class="relative flex space-x-2 items-center">
@@ -197,7 +197,7 @@
           <!-- Calendar  -->
           <li x-data="dropdown" class="relative mb-4 ">
             <div
-              @click="toggle('registration')"
+              @click="toggle('calendar')"
               class="flex justify-between text-gray-400 hover:text-gray-200 hover:bg-gray-800 items-center space-x-2 rounded-md p-2 cursor-pointer"
             >
               <div class="relative flex space-x-2 items-center">
@@ -224,7 +224,7 @@
           <!-- Tables  -->
           <li x-data="dropdown" class="relative mb-4 ">
             <div
-              @click="toggle('students')"
+              @click="toggle('tables')"
               class="flex justify-between text-gray-400 hover:text-gray-200 hover:bg-gray-800 items-center space-x-2 rounded-md p-2 cursor-pointer"
             >
               <div class="relative flex space-x-2 items-center">
