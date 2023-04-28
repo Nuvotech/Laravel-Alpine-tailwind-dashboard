@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    html {
+        font-family: Poppins, Manrope, sans-serif;
+    }
+}
+
 @layer components {
     .shrinked-dropdown {
         @apply sm:absolute top-0 left-20 sm:shadow-md sm:z-10 sm:bg-theme-gray sm:rounded-md sm:p-4 border-l sm:border-none border-gray-400 ml-4 pl-4 sm:ml-0 w-28;
@@ -122,10 +128,5 @@
     /* job details tags  */
     .in-job-tags {
         @apply bg-orange-100 text-orange-700 px-2 rounded-md;
-    }
-}
-@layer base {
-    html {
-        font-family: Poppins, Manrope, sans-serif;
     }
 }

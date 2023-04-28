@@ -1,9 +1,10 @@
 <div class="fixed z-40">
+  {{-- Navigation  --}}
     <nav
-      class="h-screen bg-theme-gray transition-all duration-300 space-y-2 fixed sm:relative"
+      class="w-64 h-screen bg-theme-gray transition-all duration-300 space-y-2 fixed sm:relative"
       x-data :class="{'w-64':$store.sidebar.full, 'w-64 sm:w-20':!$store.sidebar.full, '':$store.sidebar.navOpen, 'hidden sm:block':!$store.sidebar.navOpen} "x-cloak
     >
-    <div class="pt-4">
+    <div class="pt-4 flex justify-between">
       <a
           href=""
           class="text-white font-black text-center w-full pt-10"
@@ -11,6 +12,9 @@
         >
         LOGO
       </a>
+      <div class="text-white">
+        <span> X </span>
+      </div>
     </div>
       <!-- navigation list -->
       <div class="px-4">
@@ -43,7 +47,7 @@
           >
             <i data-feather="home" class="h-4 w-4"></i>
             <h1 :class="$store.sidebar.full ? '' : 'hidden'">
-              <a href="/index.html">Dashboard</a>
+              <a href="{{ route('dashboard') }}">Dashboard</a>
             </h1>
           </li>
           <!-- Pages  -->
