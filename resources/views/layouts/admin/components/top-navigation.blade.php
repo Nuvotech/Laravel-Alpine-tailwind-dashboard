@@ -1,16 +1,4 @@
-<div class="w-full mx-auto flex items-center text-gray-500 bg-white h-16 fixed">
-    {{-- <div
-      class="hidden sm:flex shrink-0 text-center h-full items-center bg-theme-gray"
-      x-data :class="$store.sidebar.full ? 'sm:w-64 ' : 'w-20' "
-    >
-      <a
-        href=""
-        class="text-white font-black text-center w-full"
-        x-bind:class="$store.sidebar.full ? 'text-2xl px-5' : 'px-4 xm:px-2'  "
-      >
-        LOGO
-      </a>
-    </div> --}}
+<div class="w-full flex items-center font-popin text-gray-500 bg-white h-16 fixed">
     <div
       class="flex justify-between gap-8 px-5 sm:px-10 w-full h-full items-center"
     >
@@ -35,9 +23,10 @@
       <div x-data
         @click="$store.sidebar.navOpen = !$store.sidebar.navOpen"
         class="sm:hidden"
-        x-data :class="$store.sidebar.navOpen ? '' : 'hidden'"
+        x-data :class="$store.sidebar.navOpen ? 'block' : 'flex'"
       >
         <i data-feather="x" class="cursor-pointer hover:text-red-500"></i>
+        <span x-text="$store.sidebar.navOpen"></span>
       </div>
 
       <div x-data="dropdown" class="relative hidden sm:block" x-data :class="$store.sidebar.full ? 'sm:ml-64' : 'ml-20' ">
@@ -52,9 +41,9 @@
           @click.outside="open =false"
           class="py-4 bg-white absolute top-10 w-36 rounded-md shadow-md text-sm" x-cloak
         >
-          <li class="p-2 hover:bg-gray-100 cursor-pointer">Student</li>
-          <li class="p-2 hover:bg-gray-100 cursor-pointer">Staff</li>
-          <li class="p-2 hover:bg-gray-100 cursor-pointer">Event</li>
+          <li class="pl-4 py-2 hover:bg-gray-100 cursor-pointer">Student</li>
+          <li class="pl-4 py-2 hover:bg-gray-100 cursor-pointer">Staff</li>
+          <li class="pl-4 py-2 hover:bg-gray-100 cursor-pointer">Event</li>
         </ul>
       </div>
       <div class="flex items-center gap-4 text-sm">
@@ -72,12 +61,12 @@
         <div x-data="dropdown" class="relative">
           <div @click="toggle('user')" class="flex items-center sm:gap-4">
             <img
-              src=""
+              src="{{ Vite::asset('/resources/images/avatar/avatar.jpg') }}"
               alt=""
               class="w-8 h-8 rounded-full"
             />
             <div class="flex items-center">
-              <span class="hidden sm:block text-sm">Nataline</span>
+              <span class="hidden sm:block text-sm">{{ Auth()->user()->name }}</span>
               <i
                 data-feather="chevron-down"
                 class="h-4 w-4 ml-2 cursor-pointer"
@@ -87,10 +76,50 @@
           <ul
             x-show="open"
             @click.outside="open =false"
-            class="py-4 bg-white absolute top-12 w-full rounded-md shadow-md" x-cloak
+            class="py-4 bg-white absolute top-12 right-1 w-[225px] rounded-md shadow-lg" x-cloak
           >
-            <li class="p-2 hover:bg-gray-100 cursor-pointer">Profile</li>
-            <li class="p-2 hover:bg-gray-100 cursor-pointer">logout</li>
+            <li class="pl-6 pb-3 hover:bg-gray-100 cursor-pointer flex items-center gap-4">
+              <img
+              src="{{ Vite::asset('/resources/images/avatar/avatar.jpg') }}"
+              alt=""
+              class="w-8 h-8 rounded-full"
+            /> 
+            <div class=""> 
+              <div class="text-gray-800 font-semibold">{{ Auth()->user()->name }}</div>
+              <span class="block text-xs text-gray-400">Administrator</span>
+            </div>
+            </li>
+            <hr class="py-2">
+            <li class="pl-6 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-4">
+              <span><i
+                data-feather="user-check"
+                class="h-4 w-4 ml-2 cursor-pointer"
+              ></i></span> 
+              <span>My Profile</span>
+            </li>
+            <li class="pl-6 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-4">
+              <span><i
+                data-feather="settings"
+                class="h-4 w-4 ml-2 cursor-pointer"
+              ></i></span> 
+              <span>Settings</span>
+            </li>
+            <hr class="">
+            <li class="pl-2 py-2 hover:bg-gray-100 cursor-pointer flex gap-4">
+              <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <x-dropdown-link :href="route('logout')"
+                        onclick="event.preventDefault();
+                                    this.closest('form').submit();" class="flex items-center gap-4 pb-0">
+                    <span><i
+                      data-feather="log-out"
+                      class="h-4 w-4 ml-2 cursor-pointer"
+                    ></i></span> 
+                    <span>Logout</span>
+                </x-dropdown-link>
+              </form>
+              
+            </li>
           </ul>
         </div>
       </div>

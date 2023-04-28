@@ -23,11 +23,17 @@
       </style>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
-            {{-- @include('layouts.navigation') --}}
-
             <!-- Page Content -->
             <main>
-                {{ $slot }}
+                <div x-data class="h-screen antialiased">
+                    <div class="w-screen bg-body-gray antialiased flex relative">
+                        @include('layouts.admin.components.top-navigation')
+                        @include('layouts.admin.components.sidenavigation')
+                      <div class="w-full px-5  sm:px-10 mx-auto mt-16">
+                        {{ $slot }}
+                      </div>
+                    </div>
+                </div>
             </main>
         </div>
         <script>

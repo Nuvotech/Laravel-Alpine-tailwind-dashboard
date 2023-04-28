@@ -1,4 +1,5 @@
 import "./bootstrap";
+import.meta.glob(["../images/**"]);
 
 import Alpine from "alpinejs";
 window.Alpine = Alpine;
@@ -6,7 +7,7 @@ window.Alpine = Alpine;
 Alpine.store("sidebar", {
     full: true,
     active: "home",
-    navOpen: true,
+    navOpen: false,
     on: false,
     open: false,
 
